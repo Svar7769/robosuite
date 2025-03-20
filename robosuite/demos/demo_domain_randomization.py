@@ -56,12 +56,7 @@ if __name__ == "__main__":
         control_freq=20,
         hard_reset=False,  # TODO: Not setting this flag to False brings up a segfault on macos or glfw error on linux
     )
-    env = DomainRandomizationWrapper(
-        env,
-        randomize_color=False,  # randomize_color currently only works for mujoco==3.1.1
-        randomize_camera=False,  # less jarring when visualizing
-        randomize_dynamics=False,
-    )
+
     env.reset()
     env.viewer.set_camera(camera_id=0)
 
